@@ -142,8 +142,8 @@ document.getElementById('render-zone').style.width = sceneOptions.viewWidth + 'p
 document.getElementById('render-zone').style.height = sceneOptions.viewHeight + 'px';
 
 // show gravity and creation interval values
-document.getElementById('creation-interval-val').innerHTML = sceneOptions.shapeCreationPerSecond;
-document.getElementById('gravity-val').innerHTML = sceneOptions.gravity;
+document.getElementById('creation-interval-val').innerHTML = 'Shapes per sec: ' + sceneOptions.shapeCreationPerSecond;
+document.getElementById('gravity-val').innerHTML = 'Gravity: ' + sceneOptions.gravity;
 
 // add buttons events
 document.getElementById('creation-interval-plus').addEventListener('click', function(e){
@@ -151,25 +151,25 @@ document.getElementById('creation-interval-plus').addEventListener('click', func
     sceneOptions.shapeCreationPerSecond += 1;
     if (sceneOptions.shapeCreationPerSecond > 60) sceneOptions.shapeCreationPerSecond = 60;
     sceneOptions.shapeCreationInterval = 1000 / sceneOptions.shapeCreationPerSecond;
-    document.getElementById('creation-interval-val').innerHTML = sceneOptions.shapeCreationPerSecond;
+    document.getElementById('creation-interval-val').innerHTML = 'Shapes per sec: ' + sceneOptions.shapeCreationPerSecond;
 });
 document.getElementById('creation-interval-minus').addEventListener('click', function(e){
     e.preventDefault();
     sceneOptions.shapeCreationPerSecond -= 1;
     if (sceneOptions.shapeCreationPerSecond < 1) sceneOptions.shapeCreationPerSecond = 0;
     sceneOptions.shapeCreationInterval = 1000 / sceneOptions.shapeCreationPerSecond;
-    document.getElementById('creation-interval-val').innerHTML = sceneOptions.shapeCreationPerSecond;
+    document.getElementById('creation-interval-val').innerHTML = 'Shapes per sec: ' + sceneOptions.shapeCreationPerSecond;
 });
 document.getElementById('gravity-plus').addEventListener('click', function(e){
     e.preventDefault();
     sceneOptions.gravity += 5;
-    document.getElementById('gravity-val').innerHTML = sceneOptions.gravity;
+    document.getElementById('gravity-val').innerHTML = 'Gravity: ' + sceneOptions.gravity;
 });
 document.getElementById('gravity-minus').addEventListener('click', function(e){
     e.preventDefault();
     sceneOptions.gravity -= 5;
     if (sceneOptions.gravity < 5) sceneOptions.gravity = 5;
-    document.getElementById('gravity-val').innerHTML = sceneOptions.gravity;
+    document.getElementById('gravity-val').innerHTML = 'Gravity: ' + sceneOptions.gravity;
 });
 
 // create main scene for rendering
