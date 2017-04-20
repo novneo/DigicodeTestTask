@@ -1,0 +1,9 @@
+#main-game-container {margin:40px auto 40px auto;position:relative;overflow:visible;}
+#shapes-counter, #surface-area-counter, #creation-interval, #gravity {position:absolute;display:block;background:#eee;top:-30px;left:0;line-height:28px;height:28px;width:160px;text-align:left;color:#000;font-size:14px;padding:0 10px;}
+#surface-area-counter {left:182px;}
+#creation-interval {bottom:-30px;top:auto;padding-left:4px;}
+#gravity {bottom:-30px;left:176px;top:auto;padding-left:4px;}
+
+#creation-interval-plus, #creation-interval-minus, #gravity-plus, #gravity-minus {display:inline-block;margin-right:5px;color:#000;width:18px;height:18px;text-align:center;border:1px solid #666;line-height:18px;vertical-align:middle;text-decoration:none;}
+#creation-interval-plus:hover, #creation-interval-minus:hover, #gravity-plus:hover, #gravity-minus:hover {background:#fff;}
+#creation-interval-val, #gravity-val {vertical-align:middle;display:inline-block;}
